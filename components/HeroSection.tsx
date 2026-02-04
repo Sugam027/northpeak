@@ -47,7 +47,7 @@ export default function HeroSection({
         <h1 className="text-5xl md:text-6xl font-bold text-muted mb-4">
           {title}
           {highlight && (
-            <span className="block text-foreground">{highlight}</span>
+            <span className="block text-[#1E6B68]">{highlight}</span>
           )}
         </h1>
 

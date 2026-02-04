@@ -13,14 +13,14 @@ interface ServiceCardProps {
 export default function ServiceCard({ service }: ServiceCardProps) {
 
   return (
-    <Card className="relative w-[320px] h-[380px] rounded-3xl overflow-hidden shadow-xl bg-black group hover:shadow-2xl transition-shadow duration-300">
+    <Card className="relative w-[320px] h-[380px] group lg:aspect-auto">
       
       {/* Background Image */}
       <Image
         src={service.image || "/hero_background.png"} 
         alt={service.title}
         fill
-        className="object-cover"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
       />
 
       {/* Dark Gradient Overlay */}
@@ -36,7 +36,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           {service.shortDescription}
         </p>
         <Link href={`/services/${service.id}`} className="mb-4">
-          <Button variant="outline" className="w-full z-100 rounded-full text-lg py-2 hover:bg-white/10 transition-colors">
+          <Button variant="ghost" className="w-full bg-white hover:translate-none hover:bg-white/70 rounded-2xl text-lg py-2">
             Learn More
           </Button>
         </Link>

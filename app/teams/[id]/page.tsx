@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: DoctorDetailPageProps) {
-  const doctor = doctors.find((d) => d.id === params.id);
+  const {id} = await params;
+  const doctor = doctors.find((d) => d.id === id);
   
   if (!doctor) {
     return {
@@ -31,12 +32,13 @@ export async function generateMetadata({ params }: DoctorDetailPageProps) {
   };
 }
 
-export default function DoctorDetailPage({ params }: DoctorDetailPageProps) {
-  const doctor = doctors.find((d) => d.id === params.id);
+export default async function DoctorDetailPage({ params }: DoctorDetailPageProps) {
+  const {id} = await params;
+  const doctor = doctors.find((d) => d.id === id);
 
   if (!doctor) {
     notFound();
   }
 
-  return <DoctorDetail doctor={doctor} doctorId={params.id} />;
+  return <DoctorDetail doctor={doctor} doctorId={id} />;
 }

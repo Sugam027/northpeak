@@ -10,11 +10,11 @@ const ServicesPreview = () => {
     <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-12 bg-background/5">
       <div className="container">
         <div className="text-center mb-12">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</span>
+          <span className="text-background font-semibold text-md uppercase tracking-wider">Our Services</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
             Comprehensive Medical Services
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-dark max-w-2xl mx-auto">
             We offer a wide range of medical services to meet all your healthcare needs under one roof.
           </p>
         </div>
@@ -24,7 +24,7 @@ const ServicesPreview = () => {
             .slice(0, 4)
             .map((service, index) => {
               return (
-                <Card key={index} className='h-40'>
+                <Card key={index} className='h-60 group'>
                     <Link
                       href={`/services/${service.id}`}
                     >
@@ -32,15 +32,15 @@ const ServicesPreview = () => {
                       src={service.image as string} 
                       alt={service.title}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent" />
 
-                    <CardContent className="relative bottom-0 flex flex-col justify-end p-5 h-full">
-                      <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-blue-500 transition-colors">
+                    <CardContent className="relative bottom-0 flex flex-col justify-end p-5 h-full text-muted-foreground group-hover:text-muted transition-colors">
+                      <h3 className="font-heading text-lg font-semibold">
                         {service.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm mt-1">{service.shortDescription}</p>
+                      <p className="text-sm mt-1">{service.shortDescription}</p>
                     </CardContent>
                 
                   </Link>

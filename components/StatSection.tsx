@@ -13,11 +13,11 @@ const StatsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className="icon-circle h-12 w-12 mb-2 inline-flex items-center justify-center bg-primary/10 rounded-full">
-                <stat.icon className="h-8 w-8 text-primary" />
+              <div className="icon-circle h-12 w-12 mb-2 inline-flex items-center justify-center bg-background/10 rounded-full">
+                <stat.icon className="h-8 w-8 text-background" />
               </div>
               <span className="text-3xl font-bold text-foreground">{stat.value}</span>
-              <span className="text-muted-foreground">{stat.label}</span>
+              <span className="text-muted-dark">{stat.label}</span>
             </div>
           ))}
         </div>

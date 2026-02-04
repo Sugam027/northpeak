@@ -35,9 +35,9 @@ export default function ServiceDetail({ service, serviceId }: ServiceDetailProps
         <div className="relative z-10 max-w-3xl px-4 sm:px-6 lg:px-8">
           <Link 
             href="/services" 
-            className="inline-flex items-center gap-2 text-white hover:text-blue-300 mb-6 transition-colors"
+            className="group inline-flex items-center gap-2 text-muted-foreground hover:text-muted mb-6 transition-colors"
           >
-            <ArrowLeft className="h-4 w-4" /> Back to Services
+            <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1.5 transform transition-transform duration-300" /> Back to Services
           </Link>
           <h1 className="text-5xl md:text-6xl font-bold text-muted mb-4">
             {service.title}
@@ -69,7 +69,7 @@ export default function ServiceDetail({ service, serviceId }: ServiceDetailProps
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
                 About This Service
               </h2>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-muted-dark mb-8 leading-relaxed">
                 {service.description}
               </p>
 
@@ -79,7 +79,7 @@ export default function ServiceDetail({ service, serviceId }: ServiceDetailProps
               <ul className="space-y-3 mb-8">
                 {service.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-muted-dark mt-0.5 flex-shrink-0" />
                     <span className="text-foreground">{feature}</span>
                   </li>
                 ))}
@@ -101,21 +101,20 @@ export default function ServiceDetail({ service, serviceId }: ServiceDetailProps
               .slice(0, 4)
               .map((s) => {
                 return (
-                  <Card className='h-40'>
+                  <Card key={s.id} className='h-60 group'>
                       <Link
-                        key={s.id}
                         href={`/services/${s.id}`}
                       >
                       <Image
                         src={service.image || "/hero_background.png"} 
                         alt={service.title}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent" />
 
                       <CardContent className="relative bottom-0 flex flex-col justify-end p-5 h-full">
-                        <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-blue-500 transition-colors">
+                        <h3 className="font-heading text-lg font-semibold text-muted-foreground group-hover:text-muted transition-colors">
                           {s.title}
                         </h3>
                       </CardContent>

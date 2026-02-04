@@ -39,7 +39,7 @@ const Contact = () => {
             </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {contactInfo.map((contact, index) => (
-                        <Card key={index} className="bg-card shadow-card">
+                        <Card key={index}>
                             <CardHeader className='pb-1!'>
                                 <div className="flex items-center gap-3">
                                     <div className="icon-circle h-10 w-10 bg-background/10 p-2 rounded-md">
@@ -52,11 +52,11 @@ const Contact = () => {
                                 {Array.isArray(contact.value) ? (
                                     <ul className="space-y-1">
                                         {contact.value.map((item, idx) => (
-                                            <li key={idx} className="text-sm text-muted-foreground">{item}</li>
+                                            <li key={idx} className="text-sm text-muted-dark">{item}</li>
                                         ))}
                                     </ul>
                                 ) : (
-                                    <p className="text-sm text-muted-foreground">{contact.value}</p>
+                                    <p className="text-sm text-muted-dark">{contact.value}</p>
                                 )}
                             </CardContent>
                         </Card>
@@ -82,8 +82,8 @@ const Contact = () => {
                                 </div>    
                             </CardHeader>   
                             <CardContent>
-                                <Link key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:underline">
-                                    <p className='text-sm text-muted-foreground'>{link.username}</p>
+                                <Link key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer ">
+                                    <p className='text-sm text-muted-dark hover:text-background'>{link.username}</p>
                                 </Link>   
                             </CardContent>             
                         </Card>

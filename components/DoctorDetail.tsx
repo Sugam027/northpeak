@@ -69,7 +69,7 @@ export default function DoctorDetail({ doctor, doctorId }: DoctorDetailProps) {
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
                 About This Service
               </h2>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-muted-dark mb-8 leading-relaxed">
                 {doctor.description}
               </p>
 
@@ -77,13 +77,13 @@ export default function DoctorDetail({ doctor, doctorId }: DoctorDetailProps) {
                 {/* Education */}
                 <div className="flex items-start gap-4">
                   <div className="icon-circle h-12 w-12 flex-shrink-0">
-                    <GraduationCap className="h-6 w-6 text-primary" />
+                    <GraduationCap className="h-6 w-6 text-muted-dark" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Education</h3>
+                    <h3 className="font-heading text-lg font-semibold text-muted-dark mb-2">Education</h3>
                     <ul className="space-y-1">
                       {doctor.education.map((edu, index) => (
-                        <li key={index} className="text-muted-foreground">{edu}</li>
+                        <li key={index} className="text-muted-dark">{edu}</li>
                       ))}
                     </ul>
                   </div>
@@ -92,24 +92,14 @@ export default function DoctorDetail({ doctor, doctorId }: DoctorDetailProps) {
                 {/* Experience */}
                 <div className="flex items-start gap-4">
                   <div className="icon-circle h-12 w-12 flex-shrink-0">
-                    <Clock className="h-6 w-6 text-primary" />
+                    <Clock className="h-6 w-6 text-muted-dark" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Experience</h3>
-                    <p className="text-muted-foreground">{doctor.experience}</p>
+                    <h3 className="font-heading text-lg font-semibold text-muted-dark mb-2">Experience</h3>
+                    <p className="text-muted-dark">{doctor.experience}</p>
                   </div>
                 </div>
 
-                {/* Languages */}
-                <div className="flex items-start gap-4">
-                  <div className="icon-circle h-12 w-12 flex-shrink-0">
-                    <Globe className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Languages</h3>
-                    <p className="text-muted-foreground">{doctor.languages.join(', ')}</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -128,7 +118,7 @@ export default function DoctorDetail({ doctor, doctorId }: DoctorDetailProps) {
               .slice(0, 4)
               .map((doc) => {
                 return (
-                  <Card className='h-70 relative' key={doc.id}>
+                  <Card className='h-70 relative group' key={doc.id}>
                       <Link
                         key={doc.id}
                         href={`/teams/${doc.id}`}
@@ -137,12 +127,12 @@ export default function DoctorDetail({ doctor, doctorId }: DoctorDetailProps) {
                         src={doc.image || "/hero_background.png"} 
                         alt={doc.name}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent" />
 
                       <CardContent className="relative bottom-0 flex flex-col justify-end p-5 h-full">
-                        <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-blue-500 transition-colors">
+                        <h3 className="font-heading text-lg font-semibold text-muted-foreground/80 group-hover:text-muted transition-colors">
                           {doc.name}
                         </h3>
                       </CardContent>

@@ -14,11 +14,11 @@
   --color-elevate-2: rgba(255,255,255,0.09);
 
   --color-secondary-background: #D6E8D3;        
-  --color-foreground: #3FC495;         
+  --color-foreground: #000;         
   --color-border: #252723;             
-  --color-card: #1a1a1a;               
-  --color-card-foreground: #e6e6e6;    
-  --color-card-border: #262626;        
+  /* --color-card: #F5F5F7;                */
+  /* --color-card-foreground: #e6e6e6;    
+  --color-card-border: #262626;         */
 
   --color-sidebar: #1e1e1e;            
   --color-sidebar-foreground: #e6e6e6; 
@@ -32,19 +32,21 @@
   --color-popover-foreground: #e6e6e6;  
   --color-popover-border: #333333;      
 
-  --color-primary: #217D57;             
+  --color-primary: #2b8883;             
+  --color-primary-darker: #1E6B68;             
   --color-primary-foreground: #f2f2f2;  
-  --color-secondary: #6E8894;           
-  --color-secondary-foreground: #252723; 
+  --color-secondary: #E67E22;           
+  --color-secondary-foreground: #f2f2f2; 
   --color-accent: #333138;           
   --color-accent-foreground: #d9d9d9;
-  --color-destructive: #9A031E;     
+  --color-destructive: #C94B4B;     
   --color-destructive-foreground: #f2f2f2;
-  --color-muted-foreground: #D6E8D3;    
-  /* --color-muted-foreground: #DAECDB;     */
-  --color-muted: #F4F4F9;    
-
+  --color-success: #4CAF50;
+  --color-success-foreground: #f2f2f2;
+  --color-muted-foreground: #D6DEE8;    
   --color-muted-dark: #0B0B09;
+  --color-muted: #ffffff;    
+
 
   --color-input: #F4F4F9;             
   --color-ring: #F4F4F9;              
@@ -54,14 +56,6 @@
   --color-chart-4: #6699b2;          
   --color-chart-5: #a366b2;          
 
-  --shadow-2xs: 0px 2px 0px 0px rgba(0,0,0,0.02);
-  --shadow-xs: 0px 2px 0px 0px rgba(0,0,0,0.04);
-  --shadow-sm: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 1px 2px -1px rgba(0,0,0,0.08);
-  --shadow: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 1px 2px -1px rgba(0,0,0,0.08);
-  --shadow-md: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 2px 4px -1px rgba(0,0,0,0.08);
-  --shadow-lg: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 4px 6px -1px rgba(0,0,0,0.08);
-  --shadow-xl: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 8px 10px -1px rgba(0,0,0,0.08);
-  --shadow-2xl: 0px 2px 0px 0px rgba(0,0,0,0.04);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

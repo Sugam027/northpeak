@@ -14,28 +14,28 @@ const OurValues = () => {
             <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-card rounded-xl p-6 text-center shadow-card">
                 <div className="icon-circle h-16 w-16 mx-auto mb-4">
-                <Heart className="h-8 w-8 text-primary" />
+                <Heart className="h-full w-full text-primary" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-2">Compassion</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-dark text-sm">
                 We treat every patient with empathy, understanding, and genuine care.
                 </p>
             </div>
             <div className="bg-card rounded-xl p-6 text-center shadow-card">
                 <div className="icon-circle h-16 w-16 mx-auto mb-4">
-                <Target className="h-8 w-8 text-primary" />
+                <Target className="h-full w-full text-primary" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-2">Excellence</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-dark text-sm">
                 We pursue the highest standards in medical care and patient service.
                 </p>
             </div>
             <div className="bg-card rounded-xl p-6 text-center shadow-card">
                 <div className="icon-circle h-16 w-16 mx-auto mb-4">
-                <Eye className="h-8 w-8 text-primary" />
+                <Eye className="h-full w-full text-primary" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-2">Integrity</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-dark text-sm">
                 We operate with honesty, transparency, and ethical principles.
                 </p>
             </div>

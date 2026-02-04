@@ -19,8 +19,8 @@ const WhyUs = () => {
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-foreground">Why Choose Us</h2>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-[4/3] rounded-2xl bg-white overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-12">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image src="/hero_background.png" alt="Why Choose Us" width={600} height={400} className="w-full h-full object-cover" />
             </div>
 
@@ -28,15 +28,14 @@ const WhyUs = () => {
                 <h2 className="font-heading text-2xl md:text-2xl font-bold text-foreground mt-2 mb-6">
                 We Provide the Best Healthcare Services
                 </h2>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-muted-dark mb-8">
                 At NorthPark Medical Center, we are committed to providing exceptional healthcare services that prioritize your well-being. Our team of dedicated professionals works tirelessly to ensure you receive the best possible care.
                 </p>
-
                 <ul className="space-y-4 mb-8">
                 {reasons.map((reason, index) => (
                     <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground">{reason}</span>
+                    <CheckCircle className="h-5 w-5 text-muted-dark mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-dark">{reason}</span>
                     </li>
                 ))}
                 </ul>

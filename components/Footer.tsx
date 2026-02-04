@@ -21,8 +21,8 @@ const Footer = () => {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-primary">
                 <span className="text-xl font-bold text-primary-foreground">N</span>
               </div>
-              <span className="font-heading text-xl font-bold text-foreground">
-                North<span className="text-primary">Park</span>
+              <span className="font-heading text-xl font-bold text-muted">
+                NorthPeak
               </span>
             </Link>
             <p className="mt-4 text-muted-foreground text-sm">
@@ -31,19 +31,19 @@ const Footer = () => {
             <div className="mt-6 flex gap-3">
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted-foreground text-muted-dark transition-colors hover:bg-primary-darker hover:text-primary-foreground"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted-foreground text-muted-dark transition-colors hover:bg-primary-darker hover:text-primary-foreground"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted-foreground text-muted-dark transition-colors hover:bg-primary-darker hover:text-primary-foreground"
               >
                 <Twitter className="h-5 w-5" />
               </a>
@@ -52,11 +52,11 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4 font-heading text-lg font-semibold text-foreground">Quick Links</h4>
+            <h4 className="mb-4 font-heading text-lg font-semibold text-muted">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link href={link.path} className="text-muted-foreground text-sm transition-colors hover:text-primary">
+                  <Link href={link.path} className="text-muted-foreground text-sm transition-colors hover:text-muted">
                     {link.name}
                   </Link>
                 </li>
@@ -66,20 +66,20 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="mb-4 font-heading text-lg font-semibold text-foreground">Contact Info</h4>
+            <h4 className="mb-4 font-heading text-lg font-semibold text-muted">Contact Info</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
+                <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-muted-foreground" />
                 <span className="text-muted-foreground text-sm">
                   123 Healthcare Blvd, Medical City, MC 12345
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
+                <Phone className="h-5 w-5 flex-shrink-0 text-muted-foreground" />
                 <span className="text-muted-foreground text-sm">+1 (555) 123-4567</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
+                <Mail className="h-5 w-5 flex-shrink-0 text-muted-foreground" />
                 <span className="text-muted-foreground text-sm">info@northpark.com</span>
               </li>
             </ul>
@@ -87,7 +87,7 @@ const Footer = () => {
 
           {/* Working Hours */}
           <div>
-            <h4 className="mb-4 font-heading text-lg font-semibold text-foreground">Working Hours</h4>
+            <h4 className="mb-4 font-heading text-lg font-semibold text-muted">Working Hours</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <Clock className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
@@ -104,13 +104,13 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className="border-t border-border">
-        <div className="container flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="container flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-muted-foreground">
           <p className="text-sm text-muted-foreground">
             © 2024 NorthPark Medical Center. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
           </div>
         </div>
       </div>

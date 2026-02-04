@@ -7,15 +7,44 @@ import { cn } from "@/lib/utils"; // Utility to merge class names
 
 // CVA (class-variance-authority) button variants
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring cursor-pointer disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0 hover-elevate active-elevate-2 transition-all duration-300",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring cursor-pointer disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0 hover-elevate active-elevate-2 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 ease-out",
   {
     variants: {
       variant: {
-        default: "bg-background text-primary-foreground hover:border hover:border-button-outline hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
-        destructive: "bg-destructive text-destructive-foreground hover:border hover:border-button-outline hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
-        outline: "border border-button-outline bg-background/10 backdrop-blur-md shadow-lg text-primary-foreground hover:border-none hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
-        secondary: "bg-secondary text-secondary-foreground hover:border hover:border-button-outline hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
-        ghost: "border border-transparent bg-secondary-background/90 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted-dark hover:border-button-outline hover:ring-offset-2",
+        default: 
+          "bg-gradient-to-br from-primary to-primary/90 text-primary-foreground shadow-lg " +
+          "hover:bg-primary-darker",
+        
+        outline: 
+          "border-2 border-primary/50 bg-primary/5 text-primary shadow-sm backdrop-blur-sm " +
+          "hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-xl ",
+
+        secondary: 
+          "bg-secondary text-secondary-foreground shadow-md " +
+          "hover:bg-secondary/80 hover:shadow-lg " +
+          "active:scale-[0.98] ",
+
+        destructive: 
+          "bg-destructive text-destructive-foreground shadow-lg " +
+          "hover:bg-destructive/90 hover:shadow-xl ",
+
+        success: 
+          "bg-success text-white shadow-lg " +
+          "hover:bg-success/90 hover:shadow-xl ",
+
+        ghost: 
+          "bg-white/10 backdrop-blur-md border border-white/20 text-foreground shadow-xl " +
+          "hover:bg-white/20 hover:border-white/40 hover:shadow-2xl " +
+          "before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 " +
+          "relative overflow-hidden ",
+        
+        gradient: 
+          "bg-gradient-to-r from-primary via-primary/80 to-secondary text-white shadow-lg " +
+          "hover:shadow-2xl hover:from-primary/90 hover:via-primary/70 hover:to-secondary/90 ",
+
+        glow: 
+          "bg-white text-primary shadow-lg " +
+          "hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.5)] hover:shadow-primary/50 ",
       },
       size: {
         default: "min-h-9 px-4 py-2",

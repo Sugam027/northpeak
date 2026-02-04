@@ -12,11 +12,11 @@ const TeamPreview = () => {
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-12">
       <div className="container">
         <div className="text-center mb-12"> 
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Team</span>
+          <span className="text-background font-semibold text-md uppercase tracking-wider">Our Team</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
             Meet Our Expert Doctors
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-dark max-w-2xl mx-auto">
             Our team of experienced healthcare professionals is dedicated to providing you with the best medical care.
           </p>
         </div>
@@ -28,7 +28,7 @@ const TeamPreview = () => {
         </div>
 
         <div className="text-center mt-10">
-          <Link href="/doctors">
+          <Link href="/teams">
             <Button className="btn-primary">Meet All Doctors</Button>
           </Link>
         </div>

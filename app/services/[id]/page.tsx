@@ -17,6 +17,7 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: ServiceDetailPageProps) {
+  const { id } = await params;
   const service = services.find((s) => s.id === params.id);
   
   if (!service) {
@@ -31,12 +32,13 @@ export async function generateMetadata({ params }: ServiceDetailPageProps) {
   };
 }
 
-export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
+export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
+  const { id } = await params;
   const service = services.find((s) => s.id === params.id);
 
   if (!service) {
     notFound();
   }
 
-  return <ServiceDetail service={service} serviceId={params.id} />;
+  return <ServiceDetail service={service} serviceId={id} />;
 }
