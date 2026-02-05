@@ -103,7 +103,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-border">
+      <div className="border-t border-muted-foreground">
         <div className="container flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-muted-foreground">
           <p className="text-sm text-muted-foreground">
             © 2024 NorthPark Medical Center. All rights reserved.

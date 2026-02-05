@@ -161,7 +161,7 @@ export default function Navigation() {
                         
                         {/* Active indicator dot */}
                         {isActive(link.href) && (
-                          <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full"></span>
+                          <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rounded-full"></span>
                         )}
                       </Link>
                     </li>
@@ -235,7 +235,7 @@ export default function Navigation() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 text-white bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+              <div className="flex items-center gap-3 text-white bg-white/10 backdrop-blur-sm p-4">
                 <div className="bg-white/20 p-2.5 rounded-full">
                   <Clock size={18} />
                 </div>
@@ -249,7 +249,7 @@ export default function Navigation() {
 
               <a 
                 href="tel:+919876543210"
-                className="flex items-center gap-3 text-white bg-white/10 backdrop-blur-sm p-4 rounded-xl active:scale-95"
+                className="flex items-center gap-3 text-white bg-white/10 backdrop-blur-sm p-4 active:scale-95"
               >
                 <div className="bg-white/20 p-2.5 rounded-full">
                   <Phone size={18} />
