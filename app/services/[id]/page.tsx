@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 // Generate metadata for SEO
 export async function generateMetadata({ params }: ServiceDetailPageProps) {
   const { id } = await params;
-  const service = services.find((s) => s.id === params.id);
+  const service = services.find((s) => s.id === id);
   
   if (!service) {
     return {

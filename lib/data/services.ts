@@ -1,4 +1,4 @@
-import { Stethoscope, Heart, Baby, Smile, FlaskConical, Brain, Bone, Eye, LucideIcon } from 'lucide-react';
+
 
 export interface Service {
   background?: string;

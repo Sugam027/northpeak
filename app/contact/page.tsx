@@ -1,10 +1,8 @@
 // app/contact/page.tsx (Server Component)
-import { contactInfo, socialLinks, officeHours } from '@/lib/data/contacts';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { contactInfo, socialLinks } from '@/lib/data/contacts';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
-import { Clock, Mail, MapPin, Phone } from 'lucide-react';
-import { siGithub } from 'simple-icons';
 
 
 export const metadata = {

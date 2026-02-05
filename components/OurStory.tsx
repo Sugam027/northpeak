@@ -7,7 +7,7 @@ const OurStory = () => {
     <section className="bg-background/5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-12">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+            <div className="sm:aspect-[4/2] lg:aspect-[4/3] rounded-2xl overflow-hidden">
               <Image src="/hero_background.png" alt="Why Choose Us" width={600} height={400} className="w-full h-full object-cover" />
             </div>
             <div>

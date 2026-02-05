@@ -1,9 +1,6 @@
-import Link from 'next/link';
-import { Bookmark } from 'lucide-react';
 import { services } from '@/lib/data/services';
 import Cta from '@/components/Cta';
 import HeroSection from '@/components/HeroSection';
-import { Button } from '@/components/ui/button';
 import ServiceCard from '@/components/ServiceCard';
 
 const Services = () => {

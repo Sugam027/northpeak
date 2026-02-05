@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import { doctors } from '@/lib/data/doctors';
 import Cta from '@/components/Cta';
 import HeroSection from '@/components/HeroSection';

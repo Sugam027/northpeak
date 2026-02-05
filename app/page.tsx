@@ -4,8 +4,6 @@ import ServicesPreview from "@/components/ServicesPreview";
 import StatsSection from "@/components/StatSection";
 import TeamPreview from "@/components/TeamPreview";
 import WhyUs from "@/components/WhyUs";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 export default function Home() {
   return (

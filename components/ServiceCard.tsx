@@ -13,7 +13,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ service }: ServiceCardProps) {
 
   return (
-    <Card className="relative w-[320px] h-[380px] group lg:aspect-auto">
+    <Card className="relative sm:w-full max-w-sm h-[350px] group lg:aspect-auto">
       
       {/* Background Image */}
       <Image

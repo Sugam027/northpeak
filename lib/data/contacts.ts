@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, ExternalLink, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { siFacebook, siInstagram } from "simple-icons";
 
 export const contactInfo = [

@@ -1,8 +1,7 @@
 // components/ServiceDetail.tsx
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, CheckCircle, Clock, Globe, GraduationCap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ArrowLeft, Clock, GraduationCap } from 'lucide-react';
 import Cta from '@/components/Cta';
 import { Card, CardContent } from '@/components/ui/card';
 import { Doctor, doctors } from '@/lib/data/doctors';
@@ -16,7 +15,7 @@ export default function DoctorDetail({ doctor, doctorId }: DoctorDetailProps) {
 
   return (
     <>
-      <section className="relative min-h-[40vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[40vh] flex items-center overflow-hidden py-4">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
           <Image
             src={doctor.image as string}
@@ -32,26 +31,25 @@ export default function DoctorDetail({ doctor, doctorId }: DoctorDetailProps) {
   
         {/* Content */}
   
-        <div className="relative z-10 max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-3xl px-4 sm:px-6 lg:px-8 pt-10">
           <Link 
             href="/teams" 
             className="inline-flex items-center gap-2 text-white hover:text-blue-300 mb-6 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" /> Back to Teams
           </Link>
-          <h1 className="text-5xl md:text-6xl font-bold text-muted mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-muted mb-4">
             {doctor.name}
           </h1>
           
         </div>
       </section>
 
-      {/* Service Detail */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-16">
             {/* Image */}
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 flex items-center justify-center overflow-hidden relative">
+            <div className="h-[350px] w-full lg:aspect-[4/3] rounded-2xl flex items-center justify-center overflow-hidden relative">
               {doctor.image ? (
                 <Image 
                   src={doctor.image as string} 
@@ -67,9 +65,9 @@ export default function DoctorDetail({ doctor, doctorId }: DoctorDetailProps) {
             {/* Content */}
             <div>
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
-                About This Service
+                About
               </h2>
-              <p className="text-muted-dark mb-8 leading-relaxed">
+              <p className="text-muted-dark mb-8 leading-relaxed text-justify">
                 {doctor.description}
               </p>
 
