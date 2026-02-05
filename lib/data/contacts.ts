@@ -3,6 +3,11 @@ import { siFacebook, siInstagram } from "simple-icons";
 
 export const contactInfo = [
   {
+    icon: MapPin,
+    label: "Office Address",
+    value: "123 University Ave, City, State, ZIP",
+  },
+  {
     icon: Mail,
     label: "Email",
     value: "john.smith@university.edu",
@@ -12,11 +17,6 @@ export const contactInfo = [
     label: "Phone",
     value: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
     
-  },
-  {
-    icon: MapPin,
-    label: "Office Address",
-    value: "123 University Ave, City, State, ZIP",
   }
 
 ];

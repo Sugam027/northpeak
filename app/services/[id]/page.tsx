@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: ServiceDetailPageProps) {
 
 export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
   const { id } = await params;
-  const service = services.find((s) => s.id === params.id);
+  const service = services.find((s) => s.id === id);
 
   if (!service) {
     notFound();
